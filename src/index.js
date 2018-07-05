@@ -164,6 +164,17 @@ class TeamWork {
 
     }
 
+    async getTimeUser(input = { dt: new Date() }) {
+        return await this.request({
+            name: 'time.timeTrack',
+            page: Page.builder(input.pagination),
+            params: {
+                'fromdate': strftime('%Y%m%d',input)
+            }
+        });
+
+    }
+
     /**
      * Get complete and detailed people list from a specific project.
      */
