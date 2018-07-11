@@ -200,6 +200,15 @@ class TeamWork {
 
     }
 
+    async getUsersSpecific(userId) {
+        return await this.request({
+            name: 'user.get',
+            args: [userId],
+            page: Page.builder(),            
+        });
+
+    }    
+
     /**
      * Retrieve a list of active projects.
      */

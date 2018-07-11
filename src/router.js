@@ -35,7 +35,8 @@ const initRouter = function(url, headers) {
             }
         },
         user: {
-            list: format(url, 'GET', 'people.json')
+            list: format(url, 'GET', 'people.json'),
+            get:  format(url,'GET','people/%s.json') 
         },
         task: {
             done: format(url, 'PUT', 'tasks/%s/complete.json'),
